@@ -59,91 +59,52 @@ class Manager {
   }
 
   // cоздание нового заказа.
-  newOrder(client, dish, ...OtherDishes) {
-    const currentOrder = Object.assign({ dish }, { ...OtherDishes });
+  newOrder(client, ...dishes) {
+    const currentOrder = [...dishes]; // массив объектов переданных блюд
 
-    // создание итератора для текущего заказа
-    // для возможности перебирать его
-    currentOrder[Symbol.iterator] = function* () {
-      const values = Object.values(this); // Получаем массив значений свойств объекта
-      for (const dish of values) {
-        yield dish;
-      }
-    };
-
-    // проверка наличия азказанных блюд в меню
-    // если нет, то удаление из текущего заказа
-    // menu.values() - MapIterator - объект массивов
+    // проверка на существование такого блюда в меню
     for (const dish of currentOrder) {
       const dishType = dish.type;
       const dishName = dish.name;
-      const availableDishes = new Set(menu.get(dishType)); // все блюда этого типа
+      const availableDishes = new Set(menu.get(dishType));
 
-      // проверка наличия такого блюда в меню
       if (!availableDishes.has(dishName)) {
-        const keyOfDishInCurrentOrder = Object.keys(currentOrder).find(
-          (key) => currentOrder[key] === dishName
-        );
-
-        console.log("Значение keyOfDishInCurrentOrder:");
-        console.log(keyOfDishInCurrentOrder);
-
-        [...currentOrder].splice(keyOfDishInCurrentOrder, 1);
-        // удаление элемента из массива currentOrder
-
-        throw new Error(
-          `${dishType} ${dishName} - такого блюда не существует.`
-        );
+        // удаление блюда (которого нет в меню) из текущего заказа
+        const index = currentOrder.findIndex((item) => item.name === dishName);
+        if (index !== -1) {
+          currentOrder.splice(index, 1);
+        }
+        // throw new Error(
+        //   `${dishType} ${dishName} - такого блюда не существует.`
+        // );
       }
-
-      // for (const dishPrevious of previousOrder) {
-      //   for (const dishCurrent of currentOrder) {
-      //     if (dishPrevious.name === dishCurrent.name) {
-      //       dishCurrent.quantity += dishPrevious.quantity;
-      //       break;
-      //     } else {
-      //       // если такого блюда нет, то добавить его в currentOrder
-      //       currentOrder.newDish = dishPrevious; // РЕШЕНИЕ, НА МОЙ ВЗГЛЯД, КРИВОЕ,
-      //       // потому что может быть еще одно совпадение, и тогда уже не будет обновления количества
-      //     }
-      //   }
-      // }
     }
 
-    // проверка, делал ли этот клиент заказ ранее
     if (!this.orders.has(client)) {
       this.orders.set(client, currentOrder);
     } else {
-      //получение предыдущего заказа
-      let previousOrder = this.orders.get(client); // объект объектов
+      const previousOrder = this.orders.get(client);
 
-      //создание итератора для предыдущего заказа
-      previousOrder[Symbol.iterator] = function* () {
-        const values = Object.values(this); // Получаем массив значений свойств объекта
-        for (const dish of values) {
-          yield dish;
-        }
-      };
-
-      // проверка - здесь нужно перебрать циклом for of весь previousOrder,
-      // все, что есть в previousOrder, нужно добавить в currentOrder
-      // если в currentOrder есть такое блюдо, то увеличить его количество,
-      // а если нет, то добавить его в currentOrder
       for (const dishPrevious of previousOrder) {
+        let found = false;
         for (const dishCurrent of currentOrder) {
           if (dishPrevious.name === dishCurrent.name) {
             dishCurrent.quantity += dishPrevious.quantity;
-          } else {
-            // если такого блюда нет, то добавить его в currentOrder
-            currentOrder[currentOrder.length + 1] = dishPrevious;
+            found = true;
+            break;
           }
         }
+        if (!found) {
+          currentOrder.push(dishPrevious); // добавление ненайденного блюда в заказ
+        }
       }
+
+      // созранение в общий список заказов обновленных данных по этому клиенту
+      this.orders.delete(client);
+      this.orders.set(client, currentOrder);
     }
 
-    // вывод информации о заказе
-    console.log(`Клиент ${client.firstname} заказал: `);
-
+    console.log(`Клиент ${client.firstname} заказал:`);
     for (const dish of currentOrder) {
       console.log(
         `${dish.type} ${dish.name} - ${
@@ -151,9 +112,6 @@ class Manager {
         }; готовит повар ${chefs.get(dish.type)}`
       );
     }
-
-    console.log("Теперь у клиента сформирован такой общий заказ:");
-    console.log(currentOrder);
   }
 }
 
