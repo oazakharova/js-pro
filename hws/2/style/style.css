@@ -1,0 +1,133 @@
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/oniko\/GB\/technological_specialization\/JS-pro\/hws\/2\/style\/style\.scss}line{font-family:\000031}}
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/oniko\/GB\/technological_specialization\/JS-pro\/hws\/2\/style\/style\.scss}line{font-family:\000037}}
+.body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 14px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/oniko\/GB\/technological_specialization\/JS-pro\/hws\/2\/style\/style\.scss}line{font-family:\0000313}}
+.header,
+.footer {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  min-height: 50px;
+  background-color: grey;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  padding: 20px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/oniko\/GB\/technological_specialization\/JS-pro\/hws\/2\/style\/style\.scss}line{font-family:\0000325}}
+.main {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  min-height: 1000px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/oniko\/GB\/technological_specialization\/JS-pro\/hws\/2\/style\/style\.scss}line{font-family:\0000330}}
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 94%;
+  margin: 0 auto; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/oniko\/GB\/technological_specialization\/JS-pro\/hws\/2\/style\/style\.scss}line{font-family:\0000337}}
+img {
+  display: block;
+  width: 300px;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 10px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/oniko\/GB\/technological_specialization\/JS-pro\/hws\/2\/style\/style\.scss}line{font-family:\0000345}}
+a {
+  color: black; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/oniko\/GB\/technological_specialization\/JS-pro\/hws\/2\/style\/style\.scss}line{font-family:\0000349}}
+.main .container {
+  margin-top: 20px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/oniko\/GB\/technological_specialization\/JS-pro\/hws\/2\/style\/style\.scss}line{font-family:\0000352}}
+  .main .container h3 {
+    margin: 0 auto 20px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/oniko\/GB\/technological_specialization\/JS-pro\/hws\/2\/style\/style\.scss}line{font-family:\0000357}}
+.product {
+  margin-bottom: 20px;
+  border: 2px solid black;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/oniko\/GB\/technological_specialization\/JS-pro\/hws\/2\/style\/style\.scss}line{font-family:\0000365}}
+.product-info {
+  margin-right: 20px;
+  max-width: 300px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/oniko\/GB\/technological_specialization\/JS-pro\/hws\/2\/style\/style\.scss}line{font-family:\0000370}}
+.stars i {
+  color: gold; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/oniko\/GB\/technological_specialization\/JS-pro\/hws\/2\/style\/style\.scss}line{font-family:\0000374}}
+.rating-wrap h3 {
+  margin-bottom: 10px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/oniko\/GB\/technological_specialization\/JS-pro\/hws\/2\/style\/style\.scss}line{font-family:\0000378}}
+.rating-wrap h5 {
+  margin-bottom: 5px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/oniko\/GB\/technological_specialization\/JS-pro\/hws\/2\/style\/style\.scss}line{font-family:\0000382}}
+.stars {
+  margin-bottom: 20px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/oniko\/GB\/technological_specialization\/JS-pro\/hws\/2\/style\/style\.scss}line{font-family:\0000386}}
+.feedback {
+  margin-bottom: 10px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/oniko\/GB\/technological_specialization\/JS-pro\/hws\/2\/style\/style\.scss}line{font-family:\0000392}}
+.form h5 {
+  margin-bottom: 5px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/oniko\/GB\/technological_specialization\/JS-pro\/hws\/2\/style\/style\.scss}line{font-family:\0000396}}
+.textarea-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 5px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/oniko\/GB\/technological_specialization\/JS-pro\/hws\/2\/style\/style\.scss}line{font-family:\00003101}}
+  .textarea-wrap label {
+    margin-right: 5px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/oniko\/GB\/technological_specialization\/JS-pro\/hws\/2\/style\/style\.scss}line{font-family:\00003105}}
+  .textarea-wrap textarea {
+    width: 100%; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/oniko\/GB\/technological_specialization\/JS-pro\/hws\/2\/style\/style\.scss}line{font-family:\00003110}}
+button {
+  padding: 5px 10px;
+  background-color: grey;
+  border-radius: 10px;
+  color: white; }
