@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style/style.css">
+  <!-- <script src="1.js" defer></script> -->
+  <script src="2.js" defer></script>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <h2>Создайте HTML-структуру.
+        На странице должны отображаться товары, под каждым товаром должен быть
+        список отзывов на данный товар.
+        Под каждым списком отзывов должна быть форма, где можно
+        добавить отзыв для продукта.</h2>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="container">
+      <h3>Отзывы о товарах в наличии</h3>
+      <div class="product">
+        <div class="product-info">
+          <img src="images/iphone13.jpg" alt="product">
+          <h3 class="product-name"><a href="#">Apple iPhone 13</a></h3>
+
+          <!-- форма для добавления отзыва -->
+          <form id="reviewForm" class="form">
+            <h5>Оставьте свой отзыв на товар: </h5>
+            <div class="textarea-wrap">
+              <label for="userReview">Отзыв:</label>
+              <textarea id="userReview" placeholder="Введите свой отзыв о товаре от 50 до 500 знаков" name="userReview"
+                required></textarea>
+              <!-- textarea - многострочное текстовое поле,
+               в то время как input - однострочное -->
+            </div>
+            <div class="textarea-error"></div>
+            <button class="button" type="submit">Отправить отзыв</button>
+          </form>
+        </div>
+
+        <div>
+          <div class="rating-wrap">
+            <h3>Отзывы</h3>
+            <h5>Средняя оценка: </h5>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+
+            <div class="feedbacks-wrap">
+
+              <div class="feedback">
+                <!-- <div class="feedback-author">Денис</div> -->
+                <div class="feedback-text">Первый отзыв</div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="product">
+        <div class="product-info">
+          <img src="images/SonyPlayStation.jpg" alt="product">
+          <h3 class="product-name"><a href="#">Sony PlayStation 5</a></h3>
+
+          <!-- форма для добавления отзыва -->
+          <form id="reviewForm" class="form">
+            <h5>Оставьте свой отзыв на товар: </h5>
+            <div class="textarea-wrap">
+              <label for="userReview">Отзыв:</label>
+              <textarea id="userReview" placeholder="Введите свой отзыв о товаре от 50 до 500 знаков" name="userReview"
+                required></textarea>
+              <!-- textarea - многострочное текстовое поле,
+               в то время как input - однострочное -->
+            </div>
+            <div class="textarea-error"></div>
+            <button class="button" type="submit">Отправить отзыв</button>
+          </form>
+        </div>
+
+        <div>
+          <div class="rating-wrap">
+            <h3>Отзывы</h3>
+            <h5>Средняя оценка: </h5>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+
+            <div class="feedbacks-wrap">
+
+              <div class="feedback">
+                <!-- <div class="feedback-author">Денис</div> -->
+                <div class="feedback-text">Первый отзыв</div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="product">
+        <div class="product-info">
+          <img src="images/samsung.jpg" alt="product">
+          <h3 class="product-name"><a href="#">Samsung Galaxy Z Fold 3</a></h3>
+
+          <!-- форма для добавления отзыва -->
+          <form id="reviewForm" class="form">
+            <h5>Оставьте свой отзыв на товар: </h5>
+            <div class="textarea-wrap">
+              <label for="userReview">Отзыв:</label>
+              <textarea id="userReview" placeholder="Введите свой отзыв о товаре от 50 до 500 знаков" name="userReview"
+                required></textarea>
+              <!-- textarea - многострочное текстовое поле,
+               в то время как input - однострочное -->
+            </div>
+            <div class="textarea-error"></div>
+            <button class="button" type="submit">Отправить отзыв</button>
+          </form>
+        </div>
+
+        <div>
+          <div class="rating-wrap">
+            <h3>Отзывы</h3>
+            <h5>Средняя оценка: </h5>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+
+            <div class="feedbacks-wrap">
+
+              <div class="feedback">
+                <!-- <div class="feedback-author">Денис</div> -->
+                <div class="feedback-text">Первый отзыв</div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+  </main>
+
+  <footer class="footer"></footer>
+</body>
+
+</html>
